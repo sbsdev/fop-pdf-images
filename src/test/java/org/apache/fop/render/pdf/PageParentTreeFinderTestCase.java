@@ -37,7 +37,7 @@ import org.apache.fop.render.pdf.pdfbox.PageParentTreeFinder;
 import junit.framework.Assert;
 
 public class PageParentTreeFinderTestCase {
-    private static final String LINK = "linkTagged.pdf";
+    private static final String LINK = "/linkTagged.pdf";
 
     @Test
     public void testGetPageParentTreeArray() throws IOException {

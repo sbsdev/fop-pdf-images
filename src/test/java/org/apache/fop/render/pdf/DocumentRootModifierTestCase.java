@@ -41,7 +41,7 @@ import org.apache.fop.render.pdf.pdfbox.PDFBoxAdapter;
 import junit.framework.Assert;
 
 public class DocumentRootModifierTestCase {
-    private static final String CLASSMAP = "classMap.pdf";
+    private static final String CLASSMAP = "/classMap.pdf";
 
     @Test
     public void testStructTreeRootEntriesToCopy() throws IOException {

@@ -51,9 +51,9 @@ import org.apache.fop.render.pdf.pdfbox.StructureTreeMerger;
 import junit.framework.Assert;
 
 public class StructureTreeMergerTestCase {
-    private static final String LINK = "linkTagged.pdf";
-    private static final String BrokenLink = "brokenLink.pdf";
-    private static final String MissingOBJR = "missingOBJR.pdf";
+    private static final String LINK = "/linkTagged.pdf";
+    private static final String BrokenLink = "/brokenLink.pdf";
+    private static final String MissingOBJR = "/missingOBJR.pdf";
     private PDFPage pdfPage;
     private PDFDocument pdfDoc;
     private PDFBoxAdapter adapter;

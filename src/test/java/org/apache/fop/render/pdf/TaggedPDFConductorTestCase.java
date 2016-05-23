@@ -43,12 +43,12 @@ import org.apache.fop.render.pdf.pdfbox.TaggedPDFConductor;
 import junit.framework.Assert;
 
 public class TaggedPDFConductorTestCase {
-    private static final String LINK = "linkTagged.pdf";
-    private static final String HELLO = "helloWorld.pdf";
-    private static final String TABLE = "emptyRowTable.pdf";
-    private static final String OTF = "otf.pdf";
-    private static final String IMAGE = "hello2.pdf";
-    private static final String NOPARENTTREE = "NoParentTree.pdf";
+    private static final String LINK = "/linkTagged.pdf";
+    private static final String HELLO = "/helloWorld.pdf";
+    private static final String TABLE = "/emptyRowTable.pdf";
+    private static final String OTF = "/otf.pdf";
+    private static final String IMAGE = "/hello2.pdf";
+    private static final String NOPARENTTREE = "/NoParentTree.pdf";
     private PDFPage pdfPage;
     private PDFDocument pdfDoc;
 
