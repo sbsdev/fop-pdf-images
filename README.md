@@ -3,7 +3,6 @@
 **Table of Contents**
 
 - [What's in here?](#whats-in-here)
-- [Requirements](#requirements)
 - [Legal Information](#legal-information)
 - [Where to get help?](#where-to-get-help)
 - [How do I enable PDF image support in FOP?](#how-do-i-enable-pdf-image-support-in-fop)
@@ -92,18 +91,6 @@ Implementation notes:
   its PDF library. You may need to upgrade Apache FOP in this case.
 
 - Using PDF files is NOT supported inside SVG, only in XSL-FO.
-
-## Requirements
-
-This plug-in has the following requirements:
-
-- Apache PDFBox 1.0 or later
-- Apache XML Graphics Commons 1.3.1 or later (for the image converter)
-- Apache XML FOP 0.95 or later (for the FOP functionality)
-- Java 1.5 or later
-
-Note: for some problems related to the PDF plug-in, Apache FOP 1.0 or later
-is required. A number of bugs had to be fixed in FOP's PDF library.
 
 ## Legal Information
 
