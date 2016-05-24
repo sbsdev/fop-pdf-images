@@ -14,25 +14,27 @@
 ## What's in here?
 
 This package contains classes which add support using PDF images in
-fo:external-graphic elements when you generate PDF files. This means you can
-write something like:
+`fo:external-graphic` elements when you generate PDF files. This means
+you can write something like:
 
+```xml
   <fo:external-graphic src="my-doc.pdf"/>
+```
 
 Implementation notes:
 
-- This package uses the Apache PDFBox PDF library for parsing the PDF
-  files as FOP's PDF library is a write-only library.
+- This package uses the [Apache PDFBox][] PDF library for parsing the
+  PDF files as FOP's PDF library is a write-only library.
 
-- PDF image support is done differently for PDF output than for the other
-  output formats. For PDF output, the plug-in tries to transfer the
-  various PDF objects 1:1 to the target PDF. For the other output
-  formats, Apache PDFBox is used to render the PDF to a Graphics2D object
-  (Java2D). PDFBox still has some problems with rendering certain PDFs,
-  so if you run into a problem with that, don't come to me. Rather,
-  consider helping out in the PDFBox project to improve the code. This
-  plug-in only plays the adapter between FOP and PDFBox. It is not
-  responsible for correct rendering of the PDF.
+- PDF image support is done differently for PDF output than for the
+  other output formats. For PDF output, the plug-in tries to transfer
+  the various PDF objects 1:1 to the target PDF. For the other output
+  formats, [Apache PDFBox][] is used to render the PDF to a Graphics2D
+  object (Java2D). PDFBox still has some problems with rendering
+  certain PDFs, so if you run into a problem with that, don't come to
+  me. Rather, consider helping out in the PDFBox project to improve
+  the code. This plug-in only plays the adapter between FOP and
+  PDFBox. It is not responsible for correct rendering of the PDF.
 
 - Individual pages inside a multi-page PDF can be accessed by using a URI
   fragment in the following form: <uri>#page=<nr>
@@ -42,7 +44,7 @@ Implementation notes:
   speaking.
 
 - The PDF file must not be encrypted. Or else, you'll have to install an
-  OnLoadInterceptor. Example:
+  `OnLoadInterceptor`. Example:
 
   ```java
   Interceptors.getInstance().setOnLoad(new Decrypter());
@@ -106,22 +108,22 @@ See: http://xmlgraphics.apache.org/fop/gethelp.html
 
 ## How do I enable PDF image support in FOP?
 
-Just add the fop-pdf-images as a dependency to your pom.xml.
+Just add the `fop-pdf-images` as a dependency to your pom.xml.
 
-You can then use URIs referring to PDF files inside fo:external-graphic and
-fox:external-document elements.
+You can then use URIs referring to PDF files inside `fo:external-graphic` and
+`fox:external-document` elements.
 
 ## Notes on PDF image support for output formats other than PDF
 
-Please note that this plug-in was written mostly for PDF production. For
-other FOP output formats, the PDF is converted to a vector or bitmap image
-using Apache PDFBox which is not yet a full-fledged PDF viewer. There may
-be limitations concerning the quality. If you run into a problem displaying
-PDF for any output format other than PDF, you will need to ask the PDFBox
-community for help. Or you can help the Apache PDFBox project to improve
-their PDF interpreter.
+Please note that this plug-in was written mostly for PDF production.
+For other FOP output formats, the PDF is converted to a vector or
+bitmap image using [Apache PDFBox][] which is not yet a full-fledged
+PDF viewer. There may be limitations concerning the quality. If you
+run into a problem displaying PDF for any output format other than
+PDF, you will need to ask the PDFBox community for help. Or you can
+help the Apache PDFBox project to improve their PDF interpreter.
 
-The Apache PDFBox website: http://pdfbox.apache.org/
+[Apache PDFBox]: http://pdfbox.apache.org/
 
 ## Known Issues
 
